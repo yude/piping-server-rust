@@ -24,6 +24,6 @@ LABEL maintainer="yude <i@yude.jp>"
 
 # Copy executables
 COPY --from=build /tini-static /tini-static
-COPY --from=build /home/rust/src/target/arm64-unknown-linux-musl/release/piping-server /piping-server
+COPY --from=build /home/rust/src/target/aarch64-unknown-linux-musl/release/piping-server /piping-server
 # Run a server
 ENTRYPOINT [ "/tini-static", "--", "/piping-server" ]
